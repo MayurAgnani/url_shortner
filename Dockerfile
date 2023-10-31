@@ -8,6 +8,8 @@ ENV FLASK_RUN_HOST=0.0.0.0
 # Set the working directory in the container
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y curl
+
 # Copy the requirements file to the container
 COPY requirements.txt requirements.txt
 
